@@ -9,4 +9,4 @@ The idea was to implement a Inventory that could save information about clients 
 
 It was an application developed using only HTML, CSS and Vanilla Javascript, and some custom styles from the internet.
 
-You can check the result at: carzventory.netlify.app
+You can check the result at: https://carzventory.netlify.app/
