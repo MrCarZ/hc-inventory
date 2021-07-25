@@ -1,0 +1,159 @@
+.bg {
+  height: 100%;
+  background-color: #dddddd;
+}
+
+.navbar {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.content-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 80%;
+}
+
+.tab-wrapper {
+  margin: 5px;
+}
+
+.tab-bar {
+  background-color: #0000ff;
+  opacity: 0.8;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 2.5em;
+}
+.tab-bar > p {
+  width: 90%;
+  margin: 0px;
+}
+
+.tab-bar > .buttons-wrapper > button {
+  border: none;
+  background-color: #0000ff;
+  opacity: 0.8;
+  color: #ffffff;
+  border-radius: 50%;
+}
+
+.tab-bar > .buttons-wrapper {
+  text-align: center;
+  width: 10%;
+}
+
+.tab-bar > button:hover {
+  opacity: 1;
+  color: #000000;
+}
+
+
+#items-table,
+#customer-table {
+  background-color: #ffffff;
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+th, td{
+  text-align: center!important;
+  width: 20%;
+}
+
+.popup-form{
+  display: none;
+  position: fixed;
+  left: 0;
+  top:0;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.popup-wrapper {
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-height: 70%;
+  min-width: 30%;
+  overflow-y: auto;
+  transform: translate(-50%, -70%);
+  z-index: 200;
+}
+
+
+.popup-header {
+  width: 80%;
+  padding: 12px;
+  margin: auto;
+  text-align: center;
+}
+
+.popup-header > button {
+  border: none;
+  background-color: inherit;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  max-width: 5%;
+}
+
+.popup-header > button:hover {
+  color: #ff0000;
+}
+
+.form-container {
+  max-width: 75%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+.form-container > input {
+  margin-bottom: 10px;
+  border: transparent;
+  border-radius: 0.5em;
+  background-color: #dddddd;
+}
+
+.form-container > button {
+  width: 100%;
+  background-color: #0000ff;
+  opacity: 0.8;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: transparent;
+  border-radius: 0.5em;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+#customer-popup,
+#items-popup {
+  display: none;
+}
+
+.footer{
+  text-align: center;
+  opacity: 0.8;
+}
+
+.footer > h4 > a {
+  text-decoration: none;
+  color: #0000ff;
+}

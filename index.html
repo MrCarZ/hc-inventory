@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inventory System</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Inventory System for e-commerce" />
+    <meta name="author" content="CarZ" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/site.webmanifest" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    />
+    <script type="text/javascript" src="./scripts/script.js"></script>
+  </head>
+
+  <body onload="load()" class="bg">
+    <nav class="navbar">
+      <h3><b>Inventory System</b></h3>
+      <h4>Click the '+' Button to add related info in the Inventory.</h4>
+    </nav>
+
+    <section class="content-container">
+      <div class="tab-wrapper">
+        <nav class="tab-bar">
+          <p><b>Customers List</b></p>
+          <div class="buttons-wrapper">
+            <button
+              onclick="handlePopup('customer-popup')"
+              class="glyphicon glyphicon-plus"
+            ></button>
+          </div>
+        </nav>
+        <div class="tab-info">
+          <table id="customer-table">
+            <tr>
+              <th>ID:</th>
+              <th>Customer Name:</th>
+              <th>Birthdate:</th>
+              <th>Telephone Number:</th>
+              <th>Action:</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="tab-wrapper">
+        <nav class="tab-bar">
+          <p><b>Item List</b></p>
+          <div class="buttons-wrapper">
+            <button
+              onclick="handlePopup('items-popup')"
+              class="glyphicon glyphicon-plus"
+            ></button>
+          </div>
+        </nav>
+        <div class="tab-info">
+          <table id="items-table">
+            <tr>
+              <th>ID:</th>
+              <th>Product Name:</th>
+              <th>Price:</th>
+              <th>Quantity:</th>
+              <th>Action:</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!--Item Popup-->
+      <div id="popup" class="popup-form">
+        <div id="items-popup" class="popup-wrapper">
+          <div class="popup-header">
+            <h3><b>New Item</b></h3>
+            <button
+              type="submit"
+              class="close-button glyphicon glyphicon-remove"
+              onclick="closeForm()"
+            ></button>
+          </div>
+
+          <div class="form-container">
+            <label for="name"><b>Name</b></label>
+            <input
+              id="item-name"
+              type="text"
+              placeholder="Item Name"
+              name="item-name"
+              required
+            />
+
+            <label for="price"><b>Price</b></label>
+            <input
+              id="item-price"
+              type="number"
+              placeholder="Ex: 1"
+              name="item-price"
+              min="1"
+              required
+            />
+
+            <label for="item-quantity"><b>Quantity</b></label>
+            <input
+              id="item-quantity"
+              type="number"
+              placeholder="Ex: 8"
+              name="item-quantity"
+              min="1"
+              required
+            />
+
+            <button
+              type="submit"
+              onclick="handleRowCreate('items-table')"
+              class="btn"
+            >
+              Create Item
+            </button>
+          </div>
+        </div>
+
+        <!-- Customer Popup -->
+        <div id="customer-popup" class="popup-wrapper">
+          <div class="popup-header">
+            <h3><b>New Customer</b></h3>
+            <button
+              type="submit"
+              class="close-button glyphicon glyphicon-remove"
+              onclick="closeForm()"
+            ></button>
+          </div>
+
+          <div class="form-container">
+            <label for="name"><b>Name</b></label>
+            <input
+              id="customer-name"
+              type="text"
+              placeholder="Customer Name"
+              name="email"
+              required
+            />
+
+            <label for="birthdate"><b>Birthdate</b></label>
+            <input
+              id="customer-birthdate"
+              type="date"
+              placeholder="MM/DD/YYYY"
+              name="birthdate"
+              required
+            />
+
+            <label for="tel"><b>Telephone</b></label>
+            <input
+              id="customer-telephone"
+              type="number"
+              placeholder="(XX) XXXXX-XXXX"
+              name="tel"
+              required
+            />
+
+            <button
+              type="submit"
+              onclick="handleRowCreate('customer-table')"
+              class="btn"
+            >
+              Create Customer
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <h4>
+        © 2021 All Rights Reserved. Made by
+        <a href="https://github.com/MrCarZ" target="_blank">CarZ</a>
+      </h4>
+    </footer>
+  </body>
+</html>
